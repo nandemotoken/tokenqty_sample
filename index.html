@@ -7,7 +7,7 @@
     <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"
         type="application/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/@toruslabs/torus-embed"></script>
-    <script>["name": "balanceOf","outputs": [{"internalType": "uint256","name": "","type": "uint256"}],"stateMutability": "view","type": "function"},{"inputs": [{"internalType": "uint256","name": "tokenId","type": "uint256"}],]</script>
+    <script> abi = ["name": "balanceOf","outputs": [{"internalType": "uint256","name": "","type": "uint256"}],"stateMutability": "view","type": "function"},{"inputs": [{"internalType": "uint256","name": "tokenId","type": "uint256"}],]</script>
     <script>async function checkqty( useraddress ){web3rpc = await new ethers.providers.JsonRpcProvider("https://rpc-mainnet.maticvigil.com/");const contract = await new ethers.Contract( "0x0722bb43a4ce0c10a73fe30781b98d9e64adc28c" , abi , web3rpc );let fromblockchain0 = await contract.balanceOf(useraddress);fromblockchain1 = await contract.balanceOf(useraddress);qty = parseInt(fromblockchain1);console.log(`あなたは●●NFTを${qty}個持っています`);return qty}</script>
   <title>Ethers.js Practice</title>
 </head>
